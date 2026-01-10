@@ -1,0 +1,305 @@
+.step-wrap {
+	margin-bottom: 16px;
+	display: flex;
+	overflow: hidden;
+	font-size: 24rpx;
+	
+	.step1 {
+		position: relative;
+		flex:1;
+		height: 60rpx;
+		display: flex;
+		align-items: center;
+		background: #ecf5ff;
+
+		&::after {
+			content: '';
+			position: absolute;
+			right: -30rpx;
+			top: 0;
+			bottom: 0;
+			border: 30rpx solid #fff;
+			border-left: 30rpx solid #ecf5ff;
+		}
+
+		.num {
+			margin-left: 24rpx;
+			color: #ffffff;
+			text-align: center;
+			line-height: 30rpx;
+			color: #409eff;
+		}
+
+		.name {
+			color: #409eff;
+		}
+	}
+
+	.step1-active {
+		background: #409eff;
+
+		&::after {
+			border: 30rpx solid #fff;
+			border-left: 30rpx solid #409eff;
+		}
+
+		.num,.name {
+			color: #fff;
+		}
+	}
+
+	.step2 {
+		position: relative;
+		flex:1;
+		height: 60rpx;
+		display: flex;
+		align-items: center;
+		background: rgba(0, 0, 0, 0.06);
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0px;
+			top: 0;
+			bottom: 0;
+			border: 30rpx solid transparent;
+			border-left: 30rpx solid #fff;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			right: -30rpx;
+			top: 0;
+			bottom: 0;
+			border: 30rpx solid #fff;
+			border-left: 30rpx solid transparent;
+		}
+
+		.num {
+			margin-left: 50rpx;
+			color: rgba(0, 0, 0, 0.45);
+			text-align: center;
+			line-height: 30rpx;
+		}
+
+		.name {
+			color: rgba(0, 0, 0, 0.45);
+		}
+	}
+
+	.step2-over {
+		background: #ecf5ff;
+
+		&::after {
+			border: 30rpx solid #fff;
+			border-left: 30rpx solid #ecf5ff;
+		}
+
+		.num,.name {
+			color: #409eff;
+		}
+	}
+
+	.step2-active {
+		background: #409eff;
+
+		&::after {
+			border: 30rpx solid #fff;
+			border-left: 30rpx solid #409eff;
+		}
+
+		.num,.name {
+			color: #fff;
+		}
+	}
+}
+
+// 新增页面的样式
+.add-content {
+	position: relative;
+	height: 100vh;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	font-size: 28rpx;
+
+	.searchBox {
+		background: #fff;
+		flex:1;
+		overflow:scroll;
+	}
+	
+	.progress {
+		margin: 28rpx 32rpx 0;
+		overflow: auto;
+		.step-wrap {
+			width: 1210rpx;
+		}
+	}
+
+	.divider-stripe {
+		width: 100%;
+		height: 16rpx;
+		background: #f8f8f8;
+	}
+
+	.serve-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		height: 100%;
+		align-items: center;
+		.serve-btn {
+			width: 128rpx;
+			height: 48rpx;
+			line-height: 48rpx;
+			text-align: center;
+			background: #f8f8f8;
+			border-radius: 8rpx;
+			font-size: 24rpx;
+			color: rgba(0, 0, 0, 0.65);
+			margin-right: 16rpx;
+		}
+		.active {
+			background: #409eff;
+			color: #fff;
+		}
+	}
+	
+	// 当事人样式
+	.client-wrap {
+		background: #fff;
+		padding: 0 32rpx;
+		.card {
+			width: 100%;
+			background: #ffffff;
+			box-shadow: 0px 0px 4px 0px #e6edf1;
+			border-radius: 32rpx;
+			border: 1px solid rgba(0, 0, 0, 0.06);
+			margin-top: 24rpx;
+			position: relative;
+	
+			.delete-icon {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 96rpx;
+				height: 96rpx;
+				background: #fef0f0;
+				border-radius: 32rpx 0px 32rpx 0px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+	
+			.icon-man-wrap {
+				width: 144rpx;
+				height: 144rpx;
+				border-radius: 144rpx;
+				margin: 24rpx auto;
+				overflow: hidden;
+				position: relative;
+	
+				.icon-man {
+					width: 100%;
+					height: 100%;
+				}
+				.man-tip {
+					width: 148rpx;
+					height: 36rpx;
+					text-align: center;
+					line-height: 36rpx;
+					background: #409eff;
+					color: #fff;
+					position: absolute;
+					bottom: 0px;
+					font-size: 20rpx;
+				}
+			}
+		}
+		.plus {
+			display: flex;
+			flex-direction: column;
+			height: 320rpx;
+			justify-content: center;
+			align-items: center;
+			font-size: 14px;
+			color: rgba(0, 0, 0, 0.85);
+			line-height: 22px;
+	
+			.icon-bg {
+				width: 144rpx;
+				height: 144rpx;
+				background: #f8f8f8;
+				border-radius: 144rpx;
+				margin: 32rpx;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	
+		.man-btn {
+			border: 1px solid rgba(0, 0, 0, 0.06);
+			border-radius: 16rpx;
+			.btn {
+				width: 200rpx;
+				height: 72rpx;
+				line-height: 72rpx;
+				background: #fff;
+				color: rgba(0, 0, 0, 0.45);
+				font-size: 28rpx;
+			}
+		}
+	}
+	// 附件信息
+	.annex-wrap {
+		.file-card {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: rgba(0, 0, 0, 0.65);
+			line-height: 22px;
+			margin-bottom: 32rpx;
+	
+			.icon-file {
+				width: 112rpx;
+				height: 112rpx;
+				margin: 32rpx 0 16rpx;
+			}
+	
+			.name {
+				width: 80%;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+		}
+		.file-btn {
+			display: flex;
+			.btn {
+				flex: 1;
+				text-align: center;
+				height: 96rpx;
+				color: rgba(0, 0, 0, 0.85);
+				line-height: 96rpx;
+				border-top: 1px solid rgba(0, 0, 0, 0.06);
+				border-right: 1px solid rgba(0, 0, 0, 0.06);
+			}
+	
+			.del {
+				color: #f56c6c;
+			}
+		}
+	}
+	::v-deep {
+		.uni-forms-item__label {
+			padding-left: 32rpx;
+		}
+		.uni-easyinput__content {
+			background-color: #fff !important;
+		}
+	}
+}

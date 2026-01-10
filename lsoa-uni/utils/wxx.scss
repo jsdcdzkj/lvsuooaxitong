@@ -1,0 +1,57 @@
+.padding-safe-area{
+	padding-bottom: 0!important;
+	padding-bottom: constant(safe-area-inset-bottom)!important;
+	padding-bottom: env(safe-area-inset-bottom)!important;  
+}
+.u-text-center{
+	text-align: center;
+}
+.u-text-right{
+	text-align: right;
+}
+.u-font-weight{
+	font-weight: bold;
+}
+.u-oh{
+	overflow: hidden;
+}
+.u-oa{
+	overflow: auto;
+}
+.bottom_button_box{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 9;
+	width: 750rpx;
+	height:80rpx;	
+	box-sizing: border-box;
+	background: #fff;
+	padding-bottom: calc(0rpx + env(safe-area-inset-bottom));
+	view{
+		color: rgba(0, 0, 0, 0.85);
+		background: #fff;
+		height:calc(80rpx + env(safe-area-inset-bottom));
+	}
+	.active{
+		color: #fff;
+		background: rgba(30, 149, 244, 1);
+	}
+}
+.uniCenterForm{
+	.uni-forms-item__content{
+		overflow: hidden;
+	}
+}
+// 输入框样式
+.uni-easyinput__content-input {
+	padding-left: 0!important;
+}
+
+.wxx_gray{
+	background: gray!important;
+	color: #fff!important;
+}
+.w-100{
+	width: 100%;
+}

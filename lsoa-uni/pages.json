@@ -1,0 +1,189 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/login/index",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		}, {
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationBarTextStyle": "white" //修改最顶部状态栏的字体颜色可选white/black
+			}
+		},
+		{
+			"path": "pages/usercenter/index",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/usercenter/person",
+			"style": {
+				"navigationBarTitleText": "个人信息",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/usercenter/resetPassword",
+			"style": {
+				"navigationBarTitleText": "密码修改",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/usercenter/forgotpassword",
+			"style": {
+				"navigationBarTitleText": "忘记密码",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/todoMatter/index",
+			"style": {
+				"navigationBarTitleText": "待办事项",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/finishMatter/index",
+			"style": {
+				"navigationBarTitleText": "已办事项",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/caseManage/index",
+			"style": {
+				"navigationBarTitleText": "案件查询",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/caseManage/searchResult",
+			"style": {
+				"navigationBarTitleText": "案件查询结果",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/caseManage/caseDetail",
+			"style": {
+				"navigationBarTitleText": "案件详情",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/invoice/search",
+			"style": {
+				"navigationBarTitleText": "开票查询",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/invoice/invoiceCheck",
+			"style": {
+				"navigationBarTitleText": "开票审核",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/letter/search",
+			"style": {
+				"navigationBarTitleText": "开函查询",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/letter/letterCheck",
+			"style": {
+				"navigationBarTitleText": "开函审核",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/caseManage/addCase",
+			"style": {
+				"navigationBarTitleText": "新增案件",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/invoice/addInvoice",
+			"style": {
+				"navigationBarTitleText": "开票",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/invoice/searchResult",
+			"style": {
+				"navigationBarTitleText": "开票查询结果",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/letter/addLetter",
+			"style": {
+				"navigationBarTitleText": "开函",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/letter/searchResult",
+			"style": {
+				"navigationBarTitleText": "开函查询结果",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/caseManage/successPage",
+			"style": {
+				"navigationBarTitleText": "提交成功",
+				"navigationBarTextStyle": "white"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "律所OA",
+		"navigationBarBackgroundColor": "#fff",
+		"backgroundColor": "#fff",
+		"navigationStyle": "custom",
+		"disableSwipeBack": true, // 禁用滑动返回
+		"app-plus": {
+			"bounce": "none",
+			"scrollIndicator": "none" //重点是这行，其他的是我自己的需求，我这里选的是全局样式，如果要根据页面配置，则在相应的页面节点配置
+		}
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#c1c6de",
+		"selectedColor": "#000",
+		"backgroundColor": "#fff",
+		"borderStyle": "white",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/icon-home.png",
+				"selectedIconPath": "static/icon-home-active.png"
+			},
+			{
+				"pagePath": "pages/usercenter/index",
+				"text": "我的",
+				"iconPath": "static/icon-user.png",
+				"selectedIconPath": "static/icon-user-active.png"
+			}		
+		]
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
+	}
+}
